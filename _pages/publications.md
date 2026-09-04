@@ -12,13 +12,15 @@ redirect_from:
 My papers are also available on [my Google Scholar profile]({{site.author.googlescholar}}).
 {% endif %}
 
+{% assign submissions = site.data.papers | where: "category", "submission" %}
+{% if submissions.size > 0 %}
 ### Under Submission
 
-{% assign submissions = site.data.papers | where: "category", "submission" %}
 {% assign sorted_submissions = submissions | sort: "title" %}
 {% for paper in sorted_submissions %}
 {% include paper.html paper=paper %}
 {% endfor %}
+{% endif %}
 
 {% assign publications = site.data.papers | where: "category", "publication" %}
 {% assign grouped_by_year = publications | group_by: "date" %}

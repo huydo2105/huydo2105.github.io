@@ -1,15 +1,15 @@
 main:
+  - title: "About"
+    url: /
+
   - title: "Publications"
     url: /publications/
 
-  - title: "Tech Reports"
-    url: /reports/
+  - title: "Experience"
+    url: /experience/
 
-  - title: "Talks"
-    url: /talks/
-
-  - title: "Academic Activities"
-    url: /academia/
+  - title: "Awards"
+    url: /awards/
 
   - title: "CV"
-    url: /cv/Alberto%20Sonnino%20-%20CV.pdf
+    url: /cv/Academic_CV.pdf

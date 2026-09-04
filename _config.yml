@@ -7,13 +7,13 @@
 
 # Site Settings
 locale: "en-US"
-title: "Alberto Sonnino"
+title: "Quang-Huy DO"
 title_separator: "-"
-name: &name "Alberto Sonnino"
-description: &description "Research Scientist"
-url: "https://sonnino.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name: &name "Quang-Huy DO"
+description: &description "PhD Candidate in Distributed Systems and Blockchain"
+url: "https://huydo2105.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: "" # the subpath of your site, e.g. "/blog"
-repository: "asonnino/asonnino.github.io"
+repository: "huydo2105/huydo.github.io"
 teaser: # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs: false # true, false (default)
 words_per_minute: 160
@@ -57,7 +57,7 @@ yandex_site_verification:
 
 # Social Sharing
 twitter:
-  username: &twitter "alberto_sonnino"
+  username: &twitter ""
 facebook:
   username:
   app_id:
@@ -72,28 +72,31 @@ social:
 
 # Analytics
 analytics:
-  provider: "google-universal" # false (default), "google", "google-universal", "custom"
+  provider: false # false (default), "google", "google-universal", "custom"
   google:
     tracking_id:
 
 # Site Author
 author:
   name: *name
-  avatar: "Alberto Sonnino - 1.jpg"
-  bio: "Research Scientist and Engineer"
-  location: "London, UK"
+  avatar: "huydo.jpg"
+  bio: "PhD Candidate in Distributed Systems & Blockchain"
+  location: "Créteil, France"
   links:
-    - label: "alberto@mystenlabs.com"
+    - label: "huydo21052000@gmail.com"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:alberto@mystenlabs.com"
-    - label: "alberto.sonnino@ucl.ac.uk"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:alberto.sonnino@ucl.ac.uk"
-  employer:
-  pubmed: #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar: "https://scholar.google.com/citations?user=1ap_K6sAAAAJ"
-  email:
-  researchgate: # example: "https://www.researchgate.net/profile/yourprofile"
+      url: "mailto:huydo21052000@gmail.com"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/huydo2105"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/quang-huy-do-309498214/"
+  employer: "Université Paris-Est Créteil (UPEC)"
+  pubmed:
+  googlescholar:
+  email: "huydo21052000@gmail.com"
+  researchgate:
   uri:
   bitbucket:
   codepen:
@@ -101,20 +104,20 @@ author:
   flickr:
   facebook:
   foursquare:
-  github: "asonnino"
+  github: "huydo2105"
   google_plus:
   keybase:
   instagram:
-  impactstory: #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
+  impactstory:
   lastfm:
-  linkedin: "asonnino"
-  orcid: #"http://orcid.org/yourorcidurl"
+  linkedin: "quang-huy-do-309498214"
+  orcid:
   pinterest:
   soundcloud:
-  stackoverflow: # http://stackoverflow.com/users/123456/username
+  stackoverflow:
   steam:
   tumblr:
-  twitter: *twitter
+  twitter:
   vine:
   weibo:
   xing:

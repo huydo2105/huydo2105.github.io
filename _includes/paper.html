@@ -2,31 +2,14 @@
 {% assign paper = include.paper %}
 
 <h4 class="archive__item-title" itemprop="headline">
-  <a href="{{ base_path }}/papers/{{ paper.filename }}" rel="permalink" target="_blank">{{ paper.title }}</a>
+  {% if paper.link %}
+    <a href="{{ paper.link }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
+  {% elsif paper.filename %}
+    <a href="{{ base_path }}/papers/{{ paper.filename }}" rel="permalink" target="_blank">{{ paper.title }}</a>
+  {% else %}
+    {{ paper.title }}
+  {% endif %}
 </h4>
-
-<!-- {% if paper.category == "paper" %}
-<div class="small">
-  <a href="{{ base_path }}/papers/{{ paper.filename }}" rel="permalink">[pdf]
-  </a>
-  {% if paper.code %}
-  <a href="{{ paper.code }}" rel="permalink">[code]
-  </a>
-  {% endif %}
-  {% if paper.talk %}
-  <a href="{{ paper.talk }}" rel="permalink">[talk]
-  </a>
-  {% endif %}
-  {% if paper.slides %}
-  <a href="{{ paper.slides }}" rel="permalink">[slides]
-  </a>
-  {% endif %}
-  {% if paper.blogpost %}
-  <a href="{{ paper.blogpost }}" rel="permalink">[blog paper]
-  </a>
-  {% endif %}
-</div>
-{% endif %} -->
 
 {% if paper.authors %}
 <div class="small">{{ paper.authors }}</div>
@@ -43,6 +26,21 @@
 {% elsif paper.date %}
 <div class="archive__item-venue">{{ paper.date }}</div>
 {% endif %}
+
+<div class="small" style="margin-top: 4px;">
+  {% if paper.filename %}
+    <a href="{{ base_path }}/papers/{{ paper.filename }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> [PDF]</a>
+  {% endif %}
+  {% if paper.link %}
+    <a href="{{ paper.link }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> [DOI / Link]</a>
+  {% endif %}
+  {% if paper.slides %}
+    <a href="{{ base_path }}/slides/{{ paper.slides }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-powerpoint"></i> [Slides]</a>
+  {% endif %}
+  {% if paper.code %}
+    <a href="{{ paper.code }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> [Code]</a>
+  {% endif %}
+</div>
 
 {% for award in paper.awards %}
 <div class="archive__item-award">&#10024; {{ award }}</div>

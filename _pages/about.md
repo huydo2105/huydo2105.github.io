@@ -1,49 +1,48 @@
 ---
 permalink: /
-title: "About"
+title: "About Me"
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
 
-I am a research scientist at [Mysten Labs](https://mystenlabs.com) working on the [Sui](https://sui.io) blockchain. I am also affiliated with the computer science department of [University College London (UCL)](https://www.ucl.ac.uk).
+I am a **PhD Candidate in Distributed Systems and Blockchain** at [Université Paris-Est Créteil (UPEC)](https://www.u-pec.fr), France, advised by [Dr. Sami Souihi](https://scholar.google.com/citations?user=Gk74iYQAAAAJ), [Dr. Thiago Abreu](https://scholar.google.com/citations?user=Y3B0d-cAAAAJ), and [Dr. Sara Tucci-Piergiovanni](https://scholar.google.com/citations?user=rY0LCEkAAAAJ). I am also a CIFRE fellow collaborating with [Ejara](https://ejara.io) and UPEC, funded by ANRT.
 
-My research interests are in distributed systems, blockchains, and privacy enhancing technologies. These days I mostly work on Byzantine fault tolerant systems for blockchain applications including consensus protocols, consensus-less (broadcast-based) algorithms, and distributed execution engines.
-I spend most of my time developing new algorithm to produce more performant distributed systems. A key aspect of my work is to leverage all the resources available to the machine and scale blockchain validators to run on multiple machines.
+Prior to starting my PhD, I received my Computer Science Engineer degree from [Hanoi University of Science and Technology (HUST)](https://www.hust.edu.vn), Vietnam.
 
-The typical goal of my projects is to go beyond the research stage, I spend considerable effort to implement and evaluate systems to ultimately run them in production. Feel free to drop me an email if you would like to work with me or get in touch.
+## Research Interests
 
-<!-- <i class="fas fa-envelope"></i> alberto.sonnino@ucl.ac.uk<br>
-<i class="fas fa-envelope"></i> alberto@mystenlabs.com -->
+My research sits at the intersection of **distributed systems, peer-to-peer networks, and blockchain technology**:
 
-##  Short Bio
+- **Offline & Resilient Payment Systems**: Developing decentralized, off-chain payment mechanisms over wireless mesh and opportunistic networks to enable peer-to-peer transactions in internet-constrained and rural environments.
+- **Blockchain Scalability & Sharding**: Designing adaptive sharding mechanisms (leveraging Deep Reinforcement Learning) to optimize throughput and latency in next-generation networks (5G network slicing).
+- **Opportunistic & Delay-Tolerant Networks**: Enhancing routing protocols (e.g., epidemic routing with reinforcement learning) and establishing node trust and reliability via blockchain integration.
+- **BFT Consensus & Quorum Protocols**: Implementing resilient quorum-based consensus and finalization protocols for off-chain settlement and fault tolerance.
+- **AI-Enhanced Networking**: Applying Federated Learning and Reinforcement Learning to optimize network throughput, node coordination, and resource allocation.
 
-I received my PhD from [University College London (UCL)](https://www.ucl.ac.uk) advised by [George Danezis](http://www0.cs.ucl.ac.uk/staff/G.Danezis/) and [Jens Groth](http://www0.cs.ucl.ac.uk/staff/j.groth/). During my PhD I co-founded <kbd>chainspace.io</kbd>, which built a scalable and privacy-preserving smart contract platform. Chainspace scales by sharding its state among sub-quorums of nodes and supports privacy-preserving smart contracts by separating the contract's execution logic from its verification through zero-knowledge proofs. The company was built from several academic works such as [Chainspace](/papers/chainspace.pdf), [Byzcuit](/papers/byzcuit.pdf), and [Coconut](/papers/coconut.pdf) (the first three chapters of my [PhD thesis](/papers/ucl-phd.pdf)). We were then acquired by Facebook (now named Meta) in February 2019.
+## Current Research: PhD Thesis
 
-I then helped design the [Novi wallet](https://www.facebook.com/help/1388094248345081/) and [Libra](https://www.diem.com/en-us/) payment system. Designing Libra (later renamed _Diem_) required numerous research innovations such as the [Jolteon](/papers/jolteon-and-ditto.pdf) consensus protocol, the [Carousel](/papers/carousel.pdf) leader election protocol, and the [Twins](/papers/twins.pdf) testing framework. The project also led to the creation of the open-source and production-ready [Diem codebase](https://github.com/diem/diem) that became the foundation of [Aptos](https://aptoslabs.com).
+> **Thesis Title**: *An Opportunistic Mesh Network for P2P Cryptocurrency Transactions based on a Resilient Blockchain Infrastructure*
 
-While at Meta I also co-authored the [FastPay](/papers/fastpay.pdf) consensus-less payment system (the last chapter of my PhD thesis), the [Narwhal](/papers/narwhal-and-tusk.pdf) DAG-based mempool, and the [Bullshark](/papers/bullshark.pdf) consensus protocol. I then left Meta in 2022 to commercialize these projects, branded as [Sui](https://sui.io).
+In many regions of the world, unstable or non-existent internet infrastructure prevents individuals from accessing modern digital financial tools. My thesis tackles this challenge by:
+1. Enabling secure, decentralized, peer-to-peer offline transactions over Wireless Mesh Networks (evaluated using Mininet-WiFi).
+2. Leveraging smart contract-driven authority nodes and collateral mechanisms for off-chain trust and dispute resolution.
+3. Designing quorum-based weighted voting protocols for transaction validation and eventual settlement on a resilient blockchain layer.
+4. Utilizing Federated Learning and Reinforcement Learning algorithms to dynamically optimize routing and network reliability.
 
-##  Selected Publications
+## Selected Publications
 
-{% assign mysticeti = site.data.papers | where: "filename", "mysticeti.pdf" | first %}
-{% include paper.html paper=mysticeti %}
+{% for paper in site.data.papers limit:3 %}
+{% include paper.html paper=paper %}
+{% endfor %}
 
-{% assign sui-lutris = site.data.papers | where: "filename", "sui-lutris.pdf" | first %}
-{% include paper.html paper=sui-lutris %}
+<p><a href="/publications/" class="btn btn--primary">View All Publications &rarr;</a></p>
 
-{% assign narwhal_and_tusk = site.data.papers | where: "filename", "narwhal-and-tusk.pdf" | first %}
-{% include paper.html paper=narwhal_and_tusk %}
+## Recent Awards & Honors
 
-## Awards
+- **CIFRE Grant (2024 – 2027)**: Awarded by ANRT, Ejara, and Université Paris-Est Créteil (UPEC).
+- **Third Prize at Etherlink Summer Hackathon (2025)**: Organized by Etherlink, Trillitech, and Encode Club.
+- **Second Prize at Tezos Hackathon (2022)**: Tezos Africa Hackathon.
 
-I was the lucky recipient of the following awards:
-
-- CCS Distinguished Paper Award, [2024](https://www.sigsac.org/ccs/CCS2024/program/awards.html)
-- IETF Applied Networking Research Prize (ANRP), [2024](https://www.irtf.org/anrp/)
-- CCS Top Reviewer Award, [2023](/awards/Top%20Reviewer%20Award%20-%20CCS%202023.pdf), [2024](https://www.sigsac.org/ccs/CCS2024/program/awards.html), [2025](https://www.sigsac.org/ccs/CCS2025/awards/)
-- Usenix Security Notable Reviewer Award, [2025](https://www.usenix.org/sites/default/files/sec25_message_addendum.pdf)
-- VLDB Distinguished Reviewer, [2026](https://vldb.org/2026/conference-awards.html)
-- EuroSyS Best Paper Award, [2022](https://2022.eurosys.org/index.html@p=652.html)
-- EU Horizon 2020 DECODE Scholarship, 2017
+<p><a href="/awards/" class="btn btn--inverse">View Awards & Fellowships &rarr;</a></p>

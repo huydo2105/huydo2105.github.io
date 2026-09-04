@@ -1,33 +1,22 @@
-# Personal website — sonnino.com
+# Personal website — Quang-Huy DO
 
-Jekyll site (hacked from the Minimal Mistakes / academicpages template), deployed on
-GitHub Pages at https://sonnino.com. Local preview:
-`bundle exec jekyll serve --config _config.yml,_config.dev.yml`.
+Jekyll site (based on the Minimal Mistakes / academicpages template), deployed on
+GitHub Pages at https://huydo2105.github.io.
 
-## How content is wired
+## Local Preview
 
-- **Publications & tech reports** are driven by `_data/papers.json`. Each entry's
-  `filename` must match a PDF in `papers/` exactly. `category` routes entries to
-  `_pages/publications.md` vs `_pages/reports.md`.
-- **Talks** are driven by `_data/talks.json`. The `slides` field resolves to
-  `/slides/alberto-sonnino/<file>`; entries in `papers` resolve to `/papers/<file>`.
-  Filenames must match disk exactly — typos become silent 404 links.
-- Keep both JSON files **strict JSON** (no trailing commas). Jekyll's YAML parser
-  tolerates them, but other tools choke.
+```bash
+bundle exec jekyll serve --config _config.yml,_config.dev.yml
+```
 
-## Intentional quirks — do not "fix"
+## How Content is Structured
 
-- **Empty links** like `[2027]()` in `_pages/academia.md` are placeholders for
-  CFP/committee pages not yet published. Leave them until the URL exists.
-- **`_pages/pictures.md`** (`/pictures/`) is deliberately absent from
-  `_data/navigation.yml`: it exposes the `images/Alberto Sonnino - N.jpg` photos to
-  crawlers for Google Images visibility without showing them on the site.
-- **Unlisted PDFs** in `papers/` (e.g. the Libra ones) are hosted on purpose even
-  though no page links them. Old slide versions in `slides/` are an archive; most
-  are unreferenced by design.
-
-## Build constraints
-
-- Keynote `*.key` sources live next to the exported PDFs in `slides/` but are
-  excluded from the build (`exclude` list in `_config.yml`) to keep the deployed
-  site under the GitHub Pages 1 GB limit. Keep them in the repo; never publish them.
+- **Publications** are driven by `_data/papers.json` and rendered on `_pages/publications.md`. Entries can include `title`, `authors`, `venue`, `date`, `link`, and optional `code` / `filename`.
+- **Navigation** is configured in `_data/navigation.yml`.
+- **Pages**:
+  - `_pages/about.md` (`/`): Biography, research focus, PhD thesis overview, selected publications, and awards.
+  - `_pages/publications.md` (`/publications/`): Full peer-reviewed publications grouped by year.
+  - `_pages/experience.md` (`/experience/`): Professional experience, education, skills, and academic/industry references.
+  - `_pages/awards.md` (`/awards/`): CIFRE doctoral grant and hackathon prizes.
+  - `_pages/404.md`: Custom 404 page with navigation links and publications overview.
+- **Academic CV** is located at `cv/Academic_CV.pdf`.
